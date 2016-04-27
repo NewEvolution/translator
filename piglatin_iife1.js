@@ -1,6 +1,6 @@
 var external_iife = (function (sent_iife) {
 
-  var internal_iife = sent_iife ? sent_iife : {};
+  var internal_iife = sent_iife ? sent_iife : {}; // if sent_iife exists, use it, otherwise use an empty object
 
   var codex = {
     merry: 'errymay',
@@ -19,7 +19,7 @@ var external_iife = (function (sent_iife) {
   internal_iife.translateToPiglatin = function (word_array) {
     return word_array.map(function (word) {
       word = word.toLowerCase();
-      return codex[word] ? codex[word] : word;
+      return codex[word] ? codex[word] : word; // if codex[word] exists, use it, otherwise just use word
     });
   };
 
